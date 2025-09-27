@@ -12,6 +12,6 @@ public class Lab4 {
 
     public static void main(String[] args) {
         System.out.println("Trần Minh Phát!");
-        System.out.println("hii");
+        System.out.println("hiiminh");
     }
 }
