@@ -1,0 +1,68 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.lab4;
+
+/**
+ *
+ * @author ADMIN
+ */
+class SanPham3 {
+    private String tenSp;
+    private double donGia;
+    private double giamGia;
+
+    // Constructor không tham số
+    public SanPham3() {}
+
+    // Constructor 3 tham số
+    public SanPham3(String tenSp, double donGia, double giamGia) {
+        this.tenSp = tenSp;
+        this.donGia = donGia;
+        this.giamGia = giamGia;
+    }
+
+    // Constructor 2 tham số (ngầm hiểu giamGia = 0)
+    public SanPham3(String tenSp, double donGia) {
+        this(tenSp, donGia, 0);
+    }
+
+    // Getter Setter
+    public String getTenSp() {
+        return tenSp;
+    }
+
+    public void setTenSp(String tenSp) {
+        this.tenSp = tenSp;
+    }
+
+    public double getDonGia() {
+        return donGia;
+    }
+
+    public void setDonGia(double donGia) {
+        this.donGia = donGia;
+    }
+
+    public double getGiamGia() {
+        return giamGia;
+    }
+
+    public void setGiamGia(double giamGia) {
+        this.giamGia = giamGia;
+    }
+
+    // private: chỉ dùng trong class
+    private double getThueNhapKhau() {
+        return donGia * 0.1;
+    }
+
+    // public: xuất thông tin
+    public void xuat() {
+        System.out.println("Tên sản phẩm: " + tenSp);
+        System.out.println("Đơn giá: " + donGia);
+        System.out.println("Giảm giá: " + giamGia);
+        System.out.println("Thuế nhập khẩu: " + getThueNhapKhau());
+    }
+}
